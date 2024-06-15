@@ -4,9 +4,11 @@ import matplotlib.pyplot as plt
 #program simulira met šivanke, d = l = 1 
 #vir: https://statmodeling.stat.columbia.edu/2024/05/23/gpt-today-jokes-and-buffons-needle-in-python-with-plotting/
 
-num_samples = 20 #število poskusov
+num_samples = 1000 #število poskusov
 field_width = 16 #x koordinata
 field_height = 20 #y koordinata
+
+
 
 
 def generate_needles(num_samples, field_width, field_height):
@@ -40,7 +42,8 @@ def check_overlaps(x, y, theta, field_width):
         overlaps[i] = np.any((crack_positions > min_x) & (crack_positions < max_x))
         arr[i] = (((i+1))*2)/sum(overlaps)
     x = [i for i in range(len(x))]
-    plt.plot(x,arr,"ro")
+    acc = [3.1415926535 for i in range(len(x))]
+    plt.plot(x,arr,"ro",x,acc)
     plt.xlabel('št. poskusov')
     plt.ylabel('približek')
     plt.show()

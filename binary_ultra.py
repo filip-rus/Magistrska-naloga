@@ -18,7 +18,6 @@ def binary_split(a, b):
         Rab = Qmb * Ram + Pam * Rmb
     return Pab, Qab, Rab
 
-
 def chudnovsky(digits):
     start = time.time()
     DIGITS_PER_TERM = 14.181647462725477
@@ -32,7 +31,7 @@ def chudnovsky(digits):
 
 
 
-
+#isti algoritem z uporabo gypy2
 import time
 from gmpy2 import mpz, isqrt
 
@@ -62,5 +61,5 @@ def chudnovsky_bs(digits):
     kvadrat = mpz(10)**(2*digits)
     pi = (426880 * isqrt(10005*kvadrat) * Q1n) // (13591409*Q1n + R1n)  
     end = time.time()
-    return (pi, end-start)
+    return end-start
 
