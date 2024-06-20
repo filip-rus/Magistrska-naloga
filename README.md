@@ -1,4 +1,4 @@
-# Magistrska-naloga
+# Magistrska naloga
 
 Repozitorij vsebuje kodo, uporabljeno pri izdelavi magistrske naloge. Datoteke:
 * bbp.py: koda za bbp algoritem
