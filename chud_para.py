@@ -20,8 +20,8 @@ def algo(dec):
         ss = bs*(13591409 + 545140134*(n+1))
         n += 1
         delni_novi += Decimal(ss)/Decimal(sd)
-    delni_novi *= Decimal(12)/Decimal(640320).sqrt()
+    delni_novi *= Decimal(12)/Decimal(640320**3).sqrt()
     pi = Decimal(1/delni_novi)
     pi = pi.to_eng_string()[:-2]
     end = time.time()
-    return end-start
+    return pi
